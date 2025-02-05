@@ -35,6 +35,7 @@ public class CustomOAuth2UserService implements OAuth2UserService<OAuth2UserRequ
         
         // OAuth2UserService를 통해 가져온 OAuth2User의 속성을 담을 클래스
         // 카카오 사용자 정보를 우리 서비스에 맞게 변환하는 과정
+        //OAuthAtrributes DTO 에서 가공한 데이터를 받아옴
         OAuthAttributes attributes = OAuthAttributes.of(
             registrationId, 
             userNameAttributeName, 
