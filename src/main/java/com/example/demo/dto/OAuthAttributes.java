@@ -85,7 +85,7 @@ public class OAuthAttributes {
         // kakao_account 안에 profile이라는 JSON 객체가 있음
         Map<String, Object> profile = (Map<String, Object>) kakaoAccount.get("profile");
 
-        // Builder 패턴을 사용하여 OAuthAttributes 객체 생성
+        // Builder 패턴을 사용하여 OAuthAttributes 객체 생성 Service에서 보낸값을 가공해서 리턴 해주는 역할
         return OAuthAttributes.builder()
                 // 카카오 프로필에서 닉네임을 가져와 name에 저장
                 .name((String) profile.get("nickname"))
