@@ -59,11 +59,9 @@ public class OAuthAttributes {
     
     // OAuth2 로그인 진행 시 키가 되는 필드값
     private String nameAttributeKey;
-    
-    // 사용자 이름
+
     private String name;
     
-    // 사용자 프로필 사진 URL
     private String picture;
 
     // OAuth2 제공자(카카오)별로 속성을 변환하는 메소드
