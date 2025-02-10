@@ -20,15 +20,15 @@
 ---
 
 ## 실행화면
-- **localhost8080
+- **localhost8080**
 ![스크린샷 2025-01-27 174206](https://github.com/user-attachments/assets/60629269-1931-44a7-a637-b38b6f7f5aa6)
 
 
-- **카카오하이퍼링크
+- **카카오하이퍼링크**
 ![스크린샷 2025-01-27 174223](https://github.com/user-attachments/assets/4c539066-178a-4204-b77a-c2ea25260c86)
 
 
-- **로그인성공
+- **로그인성공**
 ![스크린샷 2025-01-27 174230](https://github.com/user-attachments/assets/b3e15b58-2c0e-4afd-a940-2337e6986934)
 
   
