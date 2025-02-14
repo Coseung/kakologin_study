@@ -4,14 +4,79 @@
 <head>
     <meta charset="UTF-8">
     <title>홈</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .welcome-message {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .logout-link {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007bff;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .logout-link:hover {
+            background-color: #0056b3;
+        }
+        .kakao-login-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #3c1e1e; /* 카카오 브랜드 폰트 색상 */
+            background-color: #fee500; /* 카카오 브랜드 노란색 */
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        .kakao-login-button:hover {
+            background-color: #f7d600; /* 조금 더 진한 노란색 */
+        }
+        .kakao-icon {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+    </style>
 </head>
 <body>
+<div class="container">
     <div sec:authorize="isAuthenticated()">
-        <span th:text="${username}">사용자</span>님이 로그인하셨습니다.
-        <a href="/logout">로그아웃</a>
+        <div class="welcome-message">
+            <span th:text="${username}">사용자</span>님이 로그인하셨습니다.
+        </div>
+        <a href="/logout" class="logout-link">로그아웃</a>
     </div>
     <div sec:authorize="!isAuthenticated()">
-        <a href="/oauth2/authorization/kakao">카카오 로그인</a>
+        <a href="/oauth2/authorization/kakao" class="kakao-login-button">
+            카카오 로그인
+        </a>
     </div>
+</div>
 </body>
-</html> 
+</html>
